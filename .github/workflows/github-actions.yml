@@ -6,17 +6,18 @@ on:
       - master
 jobs:
   Deploy-Ari10-via-FTP:
-    name: Deploy-Ari10-via-FTP
+    name: 🎉 Deploy-Ari10-via-FTP
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action
-      env:
-        FTP_SERVER: 's153.cyber-folks.pl'
-        FTP_USERNAME: 'ari10@citystudio.pl'
-        FTP_PASSWORD: '15P-O.9[Vpu-Jd[+'
-        PORT: 21
-        METHOD: sftp
-        REMOTE_DIR: /home/cyberek/domains/citystudio.pl/public_html/ari10
-        ARGS: --verbose
+      - name: 🚚 Get latest code
+        uses: actions/checkout@master
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: 's153.cyber-folks.pl'
+          username: 'ari10@citystudio.pl'
+          password: '15P-O.9[Vpu-Jd[+'
+          port: 21
+          protocol: ftps
+          server-dir: /home/cyberek/domains/citystudio.pl/public_html/ari10/
+          log-level: verbose
