@@ -6,11 +6,17 @@ on:
       - master
 jobs:
   Deploy-Ari10-via-FTP:
+    name: Deploy-Ari10-via-FTP
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - name: Install lftp
-        run: sudo apt install lftp 
-      - name: Send files via ftp
-        run: lftp 's153.cyber-folks.pl' -u 'ari10@citystudio.pl','15P-O.9[Vpu-Jd[+' -e "set ftp:ssl-force true; set ssl:verify-certificate false; mirror . --reverse --continue --dereference -x ^\.git/$ . .; quit"
+    - uses: actions/checkout@master
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@SFTP_Beta
+      env:
+        FTP_SERVER: 's153.cyber-folks.pl'
+        FTP_USERNAME: 'ari10@citystudio.pl'
+        FTP_PASSWORD: '15P-O.9[Vpu-Jd[+'
+        PORT: 21
+        METHOD: sftp
+        REMOTE_DIR: /home/cyberek/domains/citystudio.pl/public_html/ari10
+        ARGS: --verbose
