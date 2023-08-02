@@ -10,10 +10,11 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: Upload ftp
-        uses: sebastianpopp/ftp-action@releases/v2
-        with:
-          host: ${{ secrets.FTP_ARI10_HOST }}
-          user: ${{ secrets.FTP_ARI10_USER }}
-          password: ${{ secrets.FTP_ARI10_PASSWORD }}
-          forceSsl: true
+      - run: echo "🎉 The job was automatically triggered by a ${{ secrets.FTP_ARI10_HOST }} event."
+      # - name: Upload ftp
+      #   uses: sebastianpopp/ftp-action@releases/v2
+      #   with:
+      #     host: ${{ secrets.FTP_ARI10_HOST }}
+      #     user: ${{ secrets.FTP_ARI10_USER }}
+      #     password: ${{ secrets.FTP_ARI10_PASSWORD }}
+      #     forceSsl: true
