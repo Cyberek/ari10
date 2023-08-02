@@ -10,11 +10,13 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: Upload ftp
-        uses: sebastianpopp/ftp-action@releases/v2
-        with:
-          host: "s153.cyber-folks.pl"
-          user: "ari10@citystudio.pl"
-          password: "15P-O.9[Vpu-Jd[+"
-          localDir: "."
-          remoteDir: "."
+      - name: Install lftp
+        run: sudo apt install lftp 
+      # - name: Upload ftp
+      #   uses: sebastianpopp/ftp-action@releases/v2
+      #   with:
+      #     host: "s153.cyber-folks.pl"
+      #     user: "ari10@citystudio.pl"
+      #     password: "15P-O.9[Vpu-Jd[+"
+      #     localDir: "."
+      #     remoteDir: "."
