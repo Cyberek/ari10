@@ -6,16 +6,15 @@ on:
       - master
 jobs:
   Deploy-Ari10-via-FTP:
-    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        protocol: ftps
-        server: s153.cyber-folks.pl
-        username: ari10@citystudio.pl
-        password: 15P-O.9[Vpu-Jd[+
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Upload ftp
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host: "s153.cyber-folks.pl"
+          user: "ari10@citystudio.pl"
+          password: "15P-O.9[Vpu-Jd[+"
+          localDir: "."
+          remoteDir: "."
