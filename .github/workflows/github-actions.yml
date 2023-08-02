@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@SFTP_Beta
+      uses: SamKirkland/FTP-Deploy-Action
       env:
         FTP_SERVER: 's153.cyber-folks.pl'
         FTP_USERNAME: 'ari10@citystudio.pl'
