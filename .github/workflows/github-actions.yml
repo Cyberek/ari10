@@ -15,6 +15,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
+        protocol: ftps
         server: ${{ secrets.FTP_ARI10_HOST }}
         username: ${{ secrets.FTP_ARI10_USER }}
         password: ${{ secrets.FTP_ARI10_PASSWORD }}
