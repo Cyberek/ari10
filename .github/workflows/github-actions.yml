@@ -6,15 +6,15 @@ on:
       - master
 jobs:
   Deploy-Ari10-via-FTP:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
-      - run: echo "🎉 The job was automatically triggered by a ${{ secrets.FTP_ARI10_HOST }} event."
-      # - name: Upload ftp
-      #   uses: sebastianpopp/ftp-action@releases/v2
-      #   with:
-      #     host: ${{ secrets.FTP_ARI10_HOST }}
-      #     user: ${{ secrets.FTP_ARI10_USER }}
-      #     password: ${{ secrets.FTP_ARI10_PASSWORD }}
-      #     forceSsl: true
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_ARI10_HOST }}
+        username: ${{ secrets.FTP_ARI10_USER }}
+        password: ${{ secrets.FTP_ARI10_PASSWORD }}
