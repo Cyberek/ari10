@@ -16,6 +16,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         protocol: ftps
-        server: ${{ secrets.FTP_ARI10_HOST }}
-        username: ${{ secrets.FTP_ARI10_USER }}
-        password: ${{ secrets.FTP_ARI10_PASSWORD }}
+        server: s153.cyber-folks.pl
+        username: ari10@citystudio.pl
+        password: 15P-O.9[Vpu-Jd[+
