@@ -68,8 +68,8 @@ class AriClass {
 			'Ari10-Widget-Id: '.$this->widget_id
 		]);
 
-		$proxy = '127.0.0.1:8080';
-		curl_setopt($ch, CURLOPT_PROXY, $proxy);
+		#$proxy = '127.0.0.1:8080';
+		#curl_setopt($ch, CURLOPT_PROXY, $proxy);
 
 		$ch_response = curl_exec($ch);
 		$response_json = json_decode($ch_response, false);
