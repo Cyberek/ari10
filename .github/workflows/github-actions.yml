@@ -14,7 +14,7 @@ jobs:
       - name: 📂 Sync files
         uses: sebastianpopp/ftp-action@releases/v2
         with:
-          host: 's153.cyber-folks.pl'
-          user: 'ari10@citystudio.pl'
+          host: ${{ secrets.FTP_ARI10_HOST }}
+          user: ${{ secrets.FTP_ARI10_USER }}
           password: '15P-O.9[Vpu-Jd[+'
           forceSsl: true
