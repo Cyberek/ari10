@@ -16,5 +16,5 @@ jobs:
         with:
           host: ${{ secrets.FTP_ARI10_HOST }}
           user: ${{ secrets.FTP_ARI10_USER }}
-          password: '15P-O.9[Vpu-Jd[+'
+          password: ${{ secrets.FTP_ARI10_PASSWORD }}
           forceSsl: true
