@@ -12,10 +12,9 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@master
       - name: 📂 Sync files
-        uses: SamKirkland/web-deploy@v1
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
-          target-server: 's153.cyber-folks.pl'
-          remote-user: 'cyberek'
-          private-ssh-key: ${{ secrets.ARI10_SSH_KEY }}
-          destination-path: ~/domains/citystudio.pl/public_html/ari10/
-          ssh-port: 222
+          host: 's153.cyber-folks.pl'
+          user: 'ari10@citystudio.pl'
+          password: '15P-O.9[Vpu-Jd[+'
+          forceSsl: true
