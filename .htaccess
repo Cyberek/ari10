@@ -1,0 +1,5 @@
+#Protect Directory
+AuthName "Please provide valid username and password"
+AuthType Basic
+AuthUserFile .htpasswd
+Require valid-user
