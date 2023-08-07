@@ -13,6 +13,8 @@ class AriClass {
 	const API_DEV_BACKEND = 'https://gateway-dev.ari10.com/goods/transaction';
 	const API_PRD_BACKEND = 'https://gateway.ari10.com/goods/transaction';
 
+	const ENABLE_PROXY = false;
+
 	public function __construct(string $widget_id, string $widget_secret, string $return_url, bool $is_prod=false) {
 		$this->widget_id = $widget_id;
 		$this->widget_secret = $widget_secret;
@@ -68,8 +70,10 @@ class AriClass {
 			'Ari10-Widget-Id: '.$this->widget_id
 		]);
 
-		#$proxy = '127.0.0.1:8080';
-		#curl_setopt($ch, CURLOPT_PROXY, $proxy);
+		if (self::ENABLE_PROXY) {
+			$proxy = '127.0.0.1:8080';
+			curl_setopt($ch, CURLOPT_PROXY, $proxy);
+		}
 
 		$ch_response = curl_exec($ch);
 		$response_json = json_decode($ch_response, false);
