@@ -15,7 +15,6 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 <html lang="pl">
 <?php include 'inc/header_docs.php' ?>
 <head>
-	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Comodities timeout load redirrect (old method)</title>
 	<script>

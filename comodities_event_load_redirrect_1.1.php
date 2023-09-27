@@ -15,8 +15,8 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 <html lang="pl">
 <?php include 'inc/header_docs.php' ?>
 <head>
-	<title>Comodities event load redirrect</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Comodities event load redirrect</title>
 	<script>
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId() ?>"
 		widget_language_1776290735652 = "pl"
