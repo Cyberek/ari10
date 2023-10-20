@@ -1,11 +1,11 @@
 <?php
 include 'inc/base_class.php';
 
-$WIDGET_ID = 				'925571cb-9c7c-47ec-a0c9-72cf72617b68';
+$WIDGET_ID = 				'85499ff3-b140-481f-8cbf-6458ed9e50e7';
 $WIDGET_SECRET = 			'3d441ee1a1254254829689845d6f9474';
-$RETURN_URL =				'http://127.0.0.1';
+$RETURN_URL =				'https://webhook.site/d21805e5-4f76-421c-a64d-a8ec4050e040';
 
-$TRANSACTION_AMMOUNT = 		39.99;
+$TRANSACTION_AMMOUNT = 		3239.99;
 $TRANSACTION_CURRENCY = 	'PLN';
 
 $ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET, return_url: $RETURN_URL);
@@ -16,8 +16,9 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 <?php include 'inc/header_docs.php' ?>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Comodities event listener load no redirrect</title>
+	<title>Comodities event listener load no redirrect - Blik + KYC (high ammount)</title>
 	<script>
+		widget_no_logo_8075047110440 = 'true';
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId() ?>"
 		widget_language_1776290735652 = "en"
 
