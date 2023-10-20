@@ -1,23 +1,21 @@
 <?php
 include 'inc/base_class.php';
-$WIDGET_ID = 				'9298feb8-61d3-47fe-b979-2f43fde4b820';
-$WIDGET_SECRET = 			'28ebbe8df5a74b39b0bf0e97e67b2131';
-$RETURN_URL =				'https://webhook.site/000fb031-66ed-4edd-801e-ecbccd9826d9';
+$WIDGET_ID = 				'';
+$WIDGET_SECRET = 			'';
+$RETURN_URL =				'';
 
-$TRANSACTION_AMMOUNT = 		3500;
+$TRANSACTION_AMMOUNT = 		99.99;
 $TRANSACTION_CURRENCY = 	'PLN';
 
-$ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET, return_url: $RETURN_URL, is_prod: true);
+$ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET, return_url: $RETURN_URL);
 $ari->setAmount($TRANSACTION_AMMOUNT);
 $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 <!DOCTYPE html>
 <html lang="pl">
-<?php include 'inc/header_docs.php' ?>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Comodities event listener load no redirrect</title>
 	<script>
-		widget_simple_view_9501036516336 = 'true';
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId() ?>"
 		widget_language_1776290735652 = "pl"
 
@@ -33,7 +31,7 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 			);
 		});
 	</script>
-	<script src="https://gateway.ari10.com/widget/main.min.js"></script>
+	<script src="https://gateway.ari10.com/widget/main-tst.min.js"></script>
 	
 </head>
 <body>
