@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "Ari10 Test DB",
+            "username": "ari10_widget_backend_flyway",
+            "password": "3gP,NwaYM@Ls9#FJ",
+            "database": "ari10_widget_backend"
+        }
+    ]
+}
