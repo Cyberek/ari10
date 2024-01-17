@@ -3,12 +3,11 @@ include 'inc/base_class.php';
 
 $WIDGET_ID = 				'6437031b-3cff-4bba-9b86-72ff61180d59';
 $WIDGET_SECRET = 			'3d441ee1a1254254829689845d6f9474';
-$RETURN_URL =				'http://127.0.0.1';
 
 $TRANSACTION_AMMOUNT = 		99.99;
 $TRANSACTION_CURRENCY = 	'PLN';
 
-$ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET, return_url: $RETURN_URL);
+$ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET);
 $ari->setAmount($TRANSACTION_AMMOUNT);
 $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 <!DOCTYPE html>

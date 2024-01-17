@@ -3,12 +3,11 @@ include 'inc/base_class.php';
 
 $WIDGET_ID = 				'651f5a65-83ed-40e9-863f-808de6a6a9ef';
 $WIDGET_SECRET = 			'0942312162bf42d5b9423e22ae29b7fc';
-$RETURN_URL =				'https://webhook.site/d21805e5-4f76-421c-a64d-a8ec4050e040';
 
 $TRANSACTION_AMMOUNT = 		3123.65;
 $TRANSACTION_CURRENCY = 	'PLN';
 
-$ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET, return_url: $RETURN_URL);
+$ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET);
 $ari->setAmount($TRANSACTION_AMMOUNT);
 $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 <!DOCTYPE html>

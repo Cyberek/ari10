@@ -3,12 +3,11 @@ include 'inc/base_class.php';
 
 $WIDGET_ID = 				'85499ff3-b140-481f-8cbf-6458ed9e50e7';
 $WIDGET_SECRET = 			'3d441ee1a1254254829689845d6f9474';
-$RETURN_URL =				'https://webhook.site/d21805e5-4f76-421c-a64d-a8ec4050e040';
 
 $TRANSACTION_AMMOUNT = 		3823.65;
 $TRANSACTION_CURRENCY = 	'PLN';
 
-$ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET, return_url: $RETURN_URL);
+$ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET);
 $ari->setAmount($TRANSACTION_AMMOUNT);
 $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 <!DOCTYPE html>
@@ -23,7 +22,7 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId() ?>"
 		widget_language_1776290735652 = "en"
 	</script>
-	<script src="https://gateway.ari10.com/widget/main-tst.min.js"></script>
+	<script src="https://gateway-dev.ari10.com/widget/main-tst.min.js"></script>
 </head>
 <body>
 	<script>

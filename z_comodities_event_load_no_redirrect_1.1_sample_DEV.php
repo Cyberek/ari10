@@ -1,13 +1,12 @@
 <?php
 include 'inc/base_class.php';
-$WIDGET_ID = 				'';
-$WIDGET_SECRET = 			'';
-$RETURN_URL =				'';
+$WIDGET_ID = 				'4a4a8721-3307-4efa-a69a-0c510e19c0ba';
+$WIDGET_SECRET = 			'dbed85fdb09147b1b3e91e020f57cff5';
 
 $TRANSACTION_AMMOUNT = 		99.99;
 $TRANSACTION_CURRENCY = 	'PLN';
 
-$ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET, return_url: $RETURN_URL);
+$ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET);
 $ari->setAmount($TRANSACTION_AMMOUNT);
 $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 <!DOCTYPE html>
@@ -16,6 +15,8 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Comodities event listener load no redirrect</title>
 	<script>
+		widget_simple_view_9501036516336 = 'false';
+		widget_no_logo_8075047110440 = 'false';
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId() ?>"
 		widget_language_1776290735652 = "pl"
 
