@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exchange using JavaScript</title>
+	<script>
+		widget_id_6851681344231 = "818dad59-ff66-4eb8-8952-0a5850b2fb01"
+		widget_language_1776290735652 = "pl"
+
+        function runScript() {
+            window.dispatchEvent(
+				new CustomEvent('ari10-widget-start-transaction-request', {
+					detail: { 
+						buyCurrencyCode: 'ARI10', //token name
+						offerMoney: { //transaction details
+							amount: 500,
+							currencyCode: 'EUR'
+						}
+					}
+				})
+			);
+        };
+	</script>
+	<script src="https://gateway-dev.ari10.com/widget/main-tst.min.js"></script>
+</head>
+<body>
+	<input type="button" id="testBtn" onclick="runScript();" value="Click me"/>
+</body>
+</html>
