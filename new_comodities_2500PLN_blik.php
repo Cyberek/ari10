@@ -4,7 +4,7 @@ include 'inc/base_class.php';
 $WIDGET_ID = 				'85499ff3-b140-481f-8cbf-6458ed9e50e7';
 $WIDGET_SECRET = 			'3d441ee1a1254254829689845d6f9474';
 
-$TRANSACTION_AMMOUNT = 		79.99;
+$TRANSACTION_AMMOUNT = 		2500.99;
 $TRANSACTION_CURRENCY = 	'PLN';
 
 $ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET);
