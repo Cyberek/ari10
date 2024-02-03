@@ -43,7 +43,7 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 
 		window.addEventListener('ari10-widget-transaction-canceled-event', (event) => {
 			console.log('Received transaction canceled event: ', JSON.stringify(event.detail));
-			window.location.href = '<?php echo $RETURN_URL ?>';
+			window.location.href = '<?php echo $ari->getReturnUrl(); ?>';
 		});
 	</script>
 </head>
