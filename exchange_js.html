@@ -11,7 +11,7 @@
 			window.dispatchEvent(
 				new CustomEvent('ari10-widget-start-transaction-request', {
 					detail: { 
-						buyCurrencyCode: 'BTC', //token name
+						buyCurrencyCode: 'USDT', //token name
 						offerMoney: { //transaction details
 							amount: 500,
 							currencyCode: 'PLN'
@@ -22,8 +22,8 @@
 			window.dispatchEvent(
 				new CustomEvent('ari10-widget-transaction-changed-wallet-address-and-chain-event', {
 					detail: {
-						chain: 'BTC',
-						address: 'bc1qst0au0qwrj8u5j59m4yk7kyn2wvq3sm3uz6d8c' //destination wallet
+						chain: 'BSC',
+						address: '0x93b0eAB833c9f80980B3E89A4E1Ba5736E38CFD8' //destination wallet
 					}
 				})
 			);
@@ -40,6 +40,6 @@
 	<script src="https://gateway-dev.ari10.com/widget/main-tst.min.js"></script>
 </head>
 <body>
-	<div class='ari10-widget-wrapper' data-widget-id='13ebdb82-1871-4d21-a58d-f500d9766f3b' data-default-asset='BTC' data-default-wallet-address='bc1qst0au0qwrj8u5j59m4yk7kyn2wvq3sm3uz6d8c'></div>
+	<div class='ari10-widget-wrapper' data-widget-id='13ebdb82-1871-4d21-a58d-f500d9766f3b' data-default-asset='USDT' data-default-wallet-address='0x93b0eAB833c9f80980B3E89A4E1Ba5736E38CFD8'></div>
 </body>
 </html>
