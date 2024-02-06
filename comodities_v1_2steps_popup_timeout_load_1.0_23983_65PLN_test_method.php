@@ -1,10 +1,10 @@
 <?php
 include 'inc/base_class.php';
 
-$WIDGET_ID = 				'651f5a65-83ed-40e9-863f-808de6a6a9ef';
-$WIDGET_SECRET = 			'0942312162bf42d5b9423e22ae29b7fc';
+$WIDGET_ID = 				'a58781f2-9de3-4809-888a-89749178248e';
+$WIDGET_SECRET = 			'ef9cb8cf0b3f45c996a0094557115094';
 
-$TRANSACTION_AMMOUNT = 		3123.65;
+$TRANSACTION_AMMOUNT = 		23983.65;
 $TRANSACTION_CURRENCY = 	'PLN';
 
 $ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET);
@@ -15,10 +15,8 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 <?php include 'inc/header_docs.php' ?>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Comodities event timeout load no redirrect (old method) - Simple + CC + no logo + KYC (high ammount)</title>
+	<title>Comodities event timeout load no redirrect (old method) - Test Method + KYC + Video (super high ammount)</title>
 	<script>
-		widget_simple_view_9501036516336 = 'true';
-		widget_no_logo_8075047110440 = 'true';
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId() ?>"
 		widget_language_1776290735652 = "pl"
 	</script>
@@ -45,7 +43,7 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 
 		window.addEventListener('ari10-widget-transaction-canceled-event', (event) => {
 			console.log('Received transaction canceled event: ', JSON.stringify(event.detail));
-			window.location.href = '<?php echo $RETURN_URL ?>';
+			window.location.href = '<?php echo $ari->getReturnUrl(); ?>';
 		});
 	</script>
 </head>

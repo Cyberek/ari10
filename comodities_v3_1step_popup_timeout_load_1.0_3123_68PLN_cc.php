@@ -1,10 +1,10 @@
 <?php
 include 'inc/base_class.php';
 
-$WIDGET_ID = 				'6437031b-3cff-4bba-9b86-72ff61180d59';
-$WIDGET_SECRET = 			'3d441ee1a1254254829689845d6f9474';
+$WIDGET_ID = 				'651f5a65-83ed-40e9-863f-808de6a6a9ef';
+$WIDGET_SECRET = 			'0942312162bf42d5b9423e22ae29b7fc';
 
-$TRANSACTION_AMMOUNT = 		81.49;
+$TRANSACTION_AMMOUNT = 		3123.65;
 $TRANSACTION_CURRENCY = 	'PLN';
 
 $ari = new AriClass(widget_id: $WIDGET_ID, widget_secret: $WIDGET_SECRET);
@@ -15,26 +15,39 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 <?php include 'inc/header_docs.php' ?>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Comodities event load redirrect</title>
+	<title>Comodities event timeout load no redirrect (old method) - Simple + CC + no logo + KYC (high ammount)</title>
 	<script>
 		widget_simple_view_9501036516336 = 'true';
 		widget_no_logo_8075047110440 = 'true';
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId() ?>"
 		widget_language_1776290735652 = "pl"
-
-		window.addEventListener('ari10-transaction-window-loaded-event', (event) => {
+	</script>
+	<script src="https://gateway.ari10.com/widget/main-tst.min.js"></script>
+	<script>
+		function showWidget() {
 			window.dispatchEvent(
 				new CustomEvent('ari10-widget-start-commodities-payment-request', {
-					detail: { 
+					detail: {
 						transactionId: '<?php echo $ari->getTransactionId() ?>', //transaction ID
 						mailAddress: '<?php echo $ari->getTestEmail() ?>', //optional
 						phoneNumber: '<?php echo $ari->getTestPhoneNr() ?>' //optional (E.164 phone format)
 					}
 				})
 			);
+
+			const elem = document.getElementsByClassName('App');
+			if (elem.length == 0) {
+				setTimeout(showWidget, 200);
+			}
+		}
+
+		window.onload=setTimeout(showWidget, 2000)
+
+		window.addEventListener('ari10-widget-transaction-canceled-event', (event) => {
+			console.log('Received transaction canceled event: ', JSON.stringify(event.detail));
+			window.location.href = '<?php echo $ari->getReturnUrl(); ?>';
 		});
 	</script>
-	<script src=https://gateway-dev.ari10.com/widget/main-tst.min.js"></script>
 </head>
 <body>
 </body>
