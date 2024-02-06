@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Exchange using JavaScript</title>
 	<script>
-		widget_id_6851681344231 = "13ebdb82-1871-4d21-a58d-f500d9766f3b"
+		widget_id_6851681344231 = "f88a8ef9-1ee6-4708-86e0-9ef1a15c604b"
 		widget_language_1776290735652 = "pl"
 
 		window.addEventListener('ari10-transaction-window-loaded-event', (event) => {
@@ -13,7 +13,7 @@
 					detail: { 
 						buyCurrencyCode: 'USDT', //token name
 						offerMoney: { //transaction details
-							amount: 500,
+							amount: 80,
 							currencyCode: 'PLN'
 						}
 					}
@@ -30,8 +30,8 @@
 			window.dispatchEvent(
 				new CustomEvent('ari10-widget-transaction-changed-mail-address-and-phone-number-event', {
 					detail: {
-						mailAddress: 'marcin.bobowski@ari10.com', //optional
-						phoneNumber: '48501966441' //optional (E.164 phone format)
+						mailAddress: 'user.email@google.com', //optional
+						phoneNumber: '48999999999' //optional (E.164 phone format)
 					}
 				})
 			);
