@@ -4,7 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Exchange using JavaScript</title>
 	<script>
-		widget_id_6851681344231 = "f88a8ef9-1ee6-4708-86e0-9ef1a15c604b"
+		widget_id_6851681344231 = "13ebdb82-1871-4d21-a58d-f500d9766f3b"
 		widget_language_1776290735652 = "pl"
 
 		window.addEventListener('ari10-transaction-window-loaded-event', (event) => {
@@ -23,6 +23,7 @@
 				new CustomEvent('ari10-widget-transaction-changed-wallet-address-and-chain-event', {
 					detail: {
 						chain: 'BSC',
+						forceChain: true, //Boolean, optional, by default false
 						address: '0x93b0eAB833c9f80980B3E89A4E1Ba5736E38CFD8' //destination wallet
 					}
 				})
@@ -40,6 +41,5 @@
 	<script src="https://gateway-dev.ari10.com/widget/main-tst.min.js"></script>
 </head>
 <body>
-	<div class='ari10-widget-wrapper' data-widget-id='13ebdb82-1871-4d21-a58d-f500d9766f3b' data-default-chain='BSC' data-default-asset='USDT' data-default-wallet-address='0x93b0eAB833c9f80980B3E89A4E1Ba5736E38CFD8'></div>
 </body>
 </html>
