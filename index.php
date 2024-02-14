@@ -2,7 +2,7 @@
 $dir = substr(dirname($_SERVER['PHP_SELF']),strlen($_SERVER['DOCUMENT_ROOT']));
 echo "<h2>Index of ".$dir.":</h2>";
 //$g = glob("*");
-$g = array_filter(glob("*.php"), function($v) {
+$g = array_filter(glob("*.{php,html}", GLOB_BRACE), function($v) {
     return false === strpos($v, 'index.php');
 });
 usort($g,function($a,$b) {
