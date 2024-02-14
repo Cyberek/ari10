@@ -17,7 +17,7 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>New Layout for Comodities - test method</title>
 	<script>
-		widget_subtype_3358856118598 = 'GATEFLOW';
+		widget_subtype_3358856118598 = 'NFv2';
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId(); ?>"
 		widget_language_1776290735652 = "pl"
 
