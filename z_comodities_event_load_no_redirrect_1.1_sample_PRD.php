@@ -1,7 +1,7 @@
 <?php
 include 'inc/base_class.php';
-$WIDGET_ID = 				'dd6b6f7f-1f85-476c-80db-bc1e4e35b9cf';
-$WIDGET_SECRET = 			'3fd5fa5913514424a3346b133264676a';
+$WIDGET_ID = 				'4b13a38f-d5e7-4390-b7d8-dd28d468bf62';
+$WIDGET_SECRET = 			'747eec6a623447fd9d83e8c369ff5c22';
 
 $TRANSACTION_AMMOUNT = 		129.7;
 $TRANSACTION_CURRENCY = 	'PLN';
