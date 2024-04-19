@@ -18,6 +18,7 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 	<title>New Layout for Comodities - test method</title>
 	<script>
 		widget_subtype_3358856118598 = 'NFv2';
+		widget_payment_method_4858766613702 = 'TEST_METHOD'
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId(); ?>"
 		widget_language_1776290735652 = "pl"
 
