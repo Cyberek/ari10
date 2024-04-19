@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exchange using JavaScript</title>
+	<script>
+		widget_language_1776290735652 = "pl"
+
+		window.addEventListener('ari10-transaction-window-loaded-event', (event) => {
+			window.dispatchEvent(
+				new CustomEvent('ari10-widget-transaction-partner-metadata-changed-event', {
+					detail: {
+						partnerMetadata: {
+							partnerTransactionId: '12345678-abc-9012-abc-123456789ab',
+							partnerClientType: 'vip-client',
+							partnerParams: {
+								clientID: '1234567890abcde',
+								clientAdditionalInfo: 'custom info'
+							}
+						}
+					},
+				})
+			)
+		});
+	</script>
+	<script src="https://gateway-dev.ari10.com/widget/main-tst.min.js"></script>
+</head>
+<body>
+	<div class='ari10-widget-wrapper' data-widget-id='13ebdb82-1871-4d21-a58d-f500d9766f3b'></div>
+</body>
+</html>
