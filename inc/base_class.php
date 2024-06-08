@@ -11,7 +11,7 @@ class AriClass {
 	protected array $partner_metadata;
 
 	const TEST_EMAIL = 'marcin.bobowski@ari10.com';
-	const TEST_PHONE_NR = '48501966441';
+	const TEST_PHONE_NR = '48999999999';
 	const TEST_WEBHOOK_URL = 'https://webhook.site/3db218f6-7918-45d0-a069-fec0c912901f';
 	const API_DEV_BACKEND = 'https://gateway-dev.ari10.com/goods/transaction';
 	const API_PRD_BACKEND = 'https://gateway.ari10.com/goods/transaction';
