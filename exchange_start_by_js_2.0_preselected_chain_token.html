@@ -19,16 +19,8 @@
 						},
 						chain: {
 							name: 'BSC',
-							forced: true //if true, user will not be able to change the chain
+							forced: true
 						}
-					}
-				})
-			);
-			window.dispatchEvent(
-				new CustomEvent('ari10-widget-transaction-changed-wallet-address-and-chain-event', {
-					detail: {
-						chain: 'BSC',
-						address: '0x93b0eAB833c9f80980B3E89A4E1Ba5736E38CFD8' //destination wallet
 					}
 				})
 			);

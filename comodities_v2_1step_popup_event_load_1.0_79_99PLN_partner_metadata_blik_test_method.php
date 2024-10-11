@@ -27,7 +27,7 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 	<title>Comodities event listener load no redirrect - Simple + multiple payments  + partnerMetadata Custom Params</title>
 	<script>
 		widget_simple_view_9501036516336 = 'true';
-		widget_no_logo_8075047110440 = 'false';
+		widget_no_logo_8075047110440 = 'true';
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId() ?>"
 		widget_language_1776290735652 = "en"
 	</script>

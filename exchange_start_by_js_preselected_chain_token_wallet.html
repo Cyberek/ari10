@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Exchange using JavaScript</title>
 	<script>
@@ -23,7 +24,7 @@
 				new CustomEvent('ari10-widget-transaction-changed-wallet-address-and-chain-event', {
 					detail: {
 						chain: 'BSC',
-						forceChain: true, //Boolean, optional, by default false
+						forceChain: true, //Boolean, optional, by default false, if true, user will be able to change but the above one will be pre-selected
 						address: '0x93b0eAB833c9f80980B3E89A4E1Ba5736E38CFD8' //destination wallet
 					}
 				})
@@ -32,7 +33,7 @@
 				new CustomEvent('ari10-widget-transaction-changed-mail-address-and-phone-number-event', {
 					detail: {
 						mailAddress: 'marcin.bobowski@ari10.com', //optional
-						phoneNumber: '48501966441' //optional (E.164 phone format)
+						phoneNumber: '48999999999' //optional (E.164 phone format)
 					}
 				})
 			);

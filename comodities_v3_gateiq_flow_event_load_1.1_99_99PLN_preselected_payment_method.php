@@ -1,8 +1,8 @@
 <?php
 include 'inc/base_class.php';
 
-$WIDGET_ID = 				'85499ff3-b140-481f-8cbf-6458ed9e50e7';
-$WIDGET_SECRET = 			'3d441ee1a1254254829689845d6f9474';
+$WIDGET_ID = 				'f3f8ba74-20c7-40b5-9061-4834c89351e2';
+$WIDGET_SECRET = 			'ef9cb8cf0b3f45c996a0094557115094';
 
 $TRANSACTION_AMMOUNT = 		79.99;
 $TRANSACTION_CURRENCY = 	'PLN';
@@ -15,9 +15,10 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 <?php include 'inc/header_docs.php'; ?>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>New Layout for Comodities - Blik</title>
+	<title>New Layout for Comodities - test method</title>
 	<script>
 		widget_subtype_3358856118598 = 'NFv2';
+		widget_payment_method_4858766613702 = 'SKRILL_MACH'
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId(); ?>"
 		widget_language_1776290735652 = "pl"
 

@@ -5,20 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Exchange using JavaScript</title>
 	<script>
-		widget_id_6851681344231 = "13ebdb82-1871-4d21-a58d-f500d9766f3b"
+		widget_id_6851681344231 = "9dce3816-0f8b-4a20-b2aa-dee31ee1023b"
 		widget_language_1776290735652 = "pl"
 
 		window.addEventListener('ari10-transaction-window-loaded-event', (event) => {
 			window.dispatchEvent(
 				new CustomEvent('ari10-widget-start-transaction-request', {
 					detail: {
-						buyCurrencyCode: 'USDT', //token name
+						buyCurrencyCode: 'USDC', //token name
 						offerMoney: { //transaction details
-							amount: 80,
+							amount: 100,
 							currencyCode: 'PLN'
 						},
 						chain: {
-							name: 'BSC',
+							name: 'BASE',
 							forced: true //if true, user will not be able to change the chain
 						}
 					}
@@ -27,7 +27,7 @@
 			window.dispatchEvent(
 				new CustomEvent('ari10-widget-transaction-changed-wallet-address-and-chain-event', {
 					detail: {
-						chain: 'BSC',
+						chain: 'BASE',
 						address: '0x93b0eAB833c9f80980B3E89A4E1Ba5736E38CFD8' //destination wallet
 					}
 				})

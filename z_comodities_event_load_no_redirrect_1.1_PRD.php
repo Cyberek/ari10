@@ -1,7 +1,7 @@
 <?php
 include 'inc/base_class.php';
-$WIDGET_ID = 				'1571dc33-21ae-4e03-b281-3e8e43434cc8';
-$WIDGET_SECRET = 			'99a8cd001b864fe7b82cebb2c73006b3';
+$WIDGET_ID = 				'a419664f-dcd1-438a-8a88-ef506a8ce140';
+$WIDGET_SECRET = 			'20a7b00922ae44f5b0abe3b160e916b9';
 
 $TRANSACTION_AMMOUNT = 		39.99;
 $TRANSACTION_CURRENCY = 	'PLN';
@@ -15,6 +15,7 @@ $ari->setCurrency($TRANSACTION_CURRENCY); ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Comodities event listener load no redirrect</title>
 	<script>
+		widget_subtype_3358856118598 = 'NFv1';
 		widget_id_6851681344231 = "<?php echo $ari->getWidgetId() ?>"
 		widget_language_1776290735652 = "pl"
 
